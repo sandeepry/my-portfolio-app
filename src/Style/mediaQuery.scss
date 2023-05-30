@@ -1,0 +1,338 @@
+@import "static";
+
+@media screen and (max-width: 1122px) {
+  nav {
+    padding: 0 $p_md;
+  }
+
+  #home {
+    height: 100vh;
+    section {
+      &:first-of-type {
+        padding-left: $p_md;
+      }
+    }
+  }
+
+  #work {
+    padding: 8rem $p_md;
+    height: 110vh;
+    > section > article {
+      height: 25rem;
+      width: 90%;
+      .workItem {
+        padding: 2rem;
+        height: 20rem;
+        > aside {
+          p {
+            margin: 1rem;
+            font-size: 300 0.5rem;
+          }
+          a {
+            margin: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #services {
+    padding: $p_md;
+    section {
+      height: 90%;
+    }
+  }
+
+  #testimonial {
+    padding: $p_md;
+    section {
+      width: 100%;
+    }
+  }
+
+  #contact {
+    > section > form {
+      > input,
+      > button {
+        font: 400 0.9rem $text1;
+        width: 60%;
+      }
+    }
+  }
+
+  footer {
+    padding: $p_md;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    padding: 0 $p_base;
+  }
+
+  #home {
+    height: 100vh;
+    section {
+      &:first-of-type {
+        padding-left: $p_base;
+
+        div {
+          h1 {
+            font: 700 2.5rem $text1;
+          }
+          aside {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+
+  #work {
+    padding: 8rem $p_base;
+  }
+
+  #services {
+    padding: $p_base_inverse;
+    section {
+      height: 80%;
+      text-align: center;
+    }
+  }
+
+  #testimonial {
+    padding: $p_base;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    padding: 0 $p_sm;
+    > h2 {
+      font-size: 1.5rem;
+    }
+    div {
+      gap: 1rem;
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  #home {
+    height: 80vh;
+    section {
+      &:first-of-type {
+        padding-left: $p_sm;
+        div {
+          div {
+            gap: 2rem;
+            width: 100%;
+          }
+          aside {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  #work {
+    padding: 8rem $p_zero;
+    height: 130vh;
+    > section > article {
+      height: 30rem;
+      .workItem {
+        height: 30rem;
+      }
+    }
+  }
+
+  #services {
+    padding: $p_sm_inverse;
+    height: 90vh;
+  }
+
+  #testimonial {
+    padding: $p_zero;
+    h1 {
+      padding: 3rem;
+      margin-bottom: 0;
+    }
+  }
+
+  #contact {
+    > section > form {
+      > input,
+      > button {
+        font: 400 0.9rem $text1;
+        width: 70%;
+      }
+    }
+  }
+
+  footer {
+    padding: $p_zero;
+    grid-template-columns: 1fr;
+    div {
+      width: 100%;
+      border: none;
+      padding-top: 2rem;
+      p {
+        width: 50%;
+        margin: 2rem auto;
+      }
+    }
+
+    a {
+      margin: 0.5rem auto;
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  nav {
+    > div,
+    > a {
+      display: none;
+    }
+    .navBtn {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #home {
+    height: unset;
+    flex-direction: column-reverse;
+    section {
+      &:first-of-type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        div {
+          border: none;
+          padding-top: 2.5rem;
+          h1 {
+            font: 900 2.5rem $text1;
+          }
+          div {
+            flex-direction: column;
+          }
+          aside {
+            align-items: center;
+          }
+          article [data-special] {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span {
+              display: block;
+              width: 70%;
+              word-wrap: break-word;
+            }
+          }
+          article {
+            width: 100%;
+            text-align: center;
+            &::after {
+              top: 0;
+              left: 0%;
+            }
+          }
+        }
+      }
+      &:last-of-type {
+        border: none;
+      }
+    }
+    svg {
+      font-size: 2rem;
+      bottom: 10%;
+    }
+  }
+
+  #work {
+    > section > article {
+      width: 100%;
+      height: 30vmax;
+      .workItem {
+        height: 30rem;
+        box-shadow: 0 0 5px $color1;
+        aside {
+          padding: 1rem;
+          h3 {
+            margin: 1rem;
+          }
+          p {
+            letter-spacing: 0;
+            line-height: unset;
+            margin: 0;
+            font-size: 0.8rem;
+          }
+          a {
+            padding: 0.4rem 0.7rem;
+            margin: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #timeline {
+    .timelineBox::after {
+      left: 31px;
+    }
+    .timeLineItem {
+      width: 100%;
+      padding-left: 5rem;
+      padding-right: 2rem;
+    }
+    .rightTimeLine {
+      left: 0;
+      text-align: end;
+    }
+    .leftTimeLine,
+    .rightTimeLine {
+      &::after {
+        left: 4%;
+      }
+    }
+  }
+
+  #services {
+     section {
+      margin: 3rem 0;
+      grid-template-columns: repeat(2,1fr);
+      gap: 1rem;
+      padding: 1rem;
+      .servicesBox1 {
+        grid-column: 1/2;
+        grid-row: unset;
+      }
+      .servicesBox4 {
+        grid-column: 1/2;
+      }
+     }
+  }
+
+  #testimonial > section {
+    height: unset;
+    gap: 3rem;
+    article {
+      width: 100%;
+      height: 70vw;
+    }
+  }
+
+  #contact {
+    grid-template-columns: 1fr;
+    aside {
+      display: none;
+    }
+  }
+
+}
